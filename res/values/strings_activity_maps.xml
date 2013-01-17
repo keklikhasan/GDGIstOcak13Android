@@ -1,0 +1,11 @@
+<resources>
+
+    <!-- Strings related to maps -->
+    <string name="maps_progress_getting_data">Getting Data&#8230;</string>
+    <string name="maps_progress_wait">Please Wait&#8230;</string>
+	<string name="error_not_supported">This device not supported Google Services</string>
+	<string name="error_no_records">There is no record!!!</string>
+	<string name="error_no_unknown">Unknown Error detail: </string>
+	<string name="error_download_image">Error while downloading image</string>
+	
+</resources>

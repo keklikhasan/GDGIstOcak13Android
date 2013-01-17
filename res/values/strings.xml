@@ -1,0 +1,35 @@
+<resources>
+
+    <string name="app_name">GDG 2013</string>
+    <string name="menu_new">New Record</string>
+    <string name="menu_maps">Map View</string>
+    <string name="menu_exit">Exit</string>
+    <string name="menu_map_v1">Map API v1</string>
+    <string name="menu_map_v2">Map API v2</string>
+    <string name="menu_settings">Settings</string>
+    <string name="menu_refresh">Refresh</string>
+    <string name="menu_default">Clear Settings to default</string>
+    
+    
+    <string name="error_no_connection">Internet connection problem!!</string>
+    <string name="error_on_clear_def">Error while clearing settings</string>
+    <string name="suc_on_clear_def">Settings cleared</string>
+    
+    <string name="dialog_ok">OK</string>
+    <string name="dialog_cancel">Cancel</string>
+    <string name="dialog_title_username">Change User Name</string>
+    <string name="dialog_title_sure_clear_to_defaults">Are you sure to clear settings</string>
+
+    
+    <string name="settings_category_user_info">User Info</string>
+    <string name="settings_category_api_info">API Info</string>
+    
+    <string name="settings_category_api_url">API URL</string>
+    <string name="settings_category_api_url_msg">Change API URL</string>
+    <string name="settings_category_api_url_sum">GDG Istanubl Test Api url </string>
+    
+    
+    <string name="settings_category_username">User Name</string>
+    <string name="settings_category_username_msg">Change User Name</string>
+    <string name="settings_category_username_sum">User Name that use this app</string>
+</resources>

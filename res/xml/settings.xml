@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <PreferenceCategory
+        android:key="user_info"
+        android:title="@string/settings_category_user_info" >
+        <EditTextPreference
+            android:defaultValue=""
+            android:dialogMessage="@string/settings_category_username_msg"
+            android:dialogTitle="@string/settings_category_username"
+            android:key="com.gdg.istanbul.ocak12.pref.username"
+            android:negativeButtonText="@string/dialog_cancel"
+            android:positiveButtonText="@string/dialog_ok"
+            android:summary="@string/settings_category_username_sum"
+            android:title="@string/settings_category_username" />
+    </PreferenceCategory>
+    <PreferenceCategory
+        android:key="api_info"
+        android:title="@string/settings_category_api_info" >
+        <EditTextPreference
+            android:defaultValue="http://amazon.minikod.com/"
+            android:dialogMessage="@string/settings_category_api_url_msg"
+            android:dialogTitle="@string/settings_category_api_url"
+            android:key="com.gdg.istanbul.ocak12.pref.api.url"
+            android:negativeButtonText="@string/dialog_cancel"
+            android:positiveButtonText="@string/dialog_ok"
+            android:summary="@string/settings_category_api_url_sum"
+            android:title="@string/settings_category_api_url" />
+    </PreferenceCategory>
+
+</PreferenceScreen>

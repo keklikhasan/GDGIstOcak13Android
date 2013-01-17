@@ -1,0 +1,36 @@
+<resources>
+
+    <!-- Strings related to new record -->
+    <string name="new_record_progress_sending">Gönderiliyor&#8230;</string>
+    <string name="new_record_label_image">Resim ekle</string>
+    <string name="new_record_hint_title">Başlık</string>
+    <string name="new_record_hint_content">İçerik</string>
+    <string name="new_record_label_send">Gönder</string>
+    <string name="new_record_label_sending">Kayıt Gönderiliyor Lütfen bekleyiniz..</string>
+    
+    <string name="new_record_dialog_choose_photo">Galeriden Seç</string>
+    <string name="new_record_dialog_take_photo">Fotoğraf Çek</string>
+    
+    <string name="new_record_dialog_choose_maps">Maps API versiyonu seçiniz</string>
+    <string name="new_record_dialog_choose_mapsv1">Maps API v1</string>
+    <string name="new_record_dialog_choose_mapsv2">Maps API v2</string>
+    
+    
+    <string name="new_record_error_no_camera">Cihazınızda kamera bulunamadı</string>
+    
+    <string name="new_record_error_username_required">Kullanıcı adı gerekli</string>
+    <string name="new_record_error_username_short">Kullanıcı adı en az 3 karakter olmalıdır</string>
+    <string name="new_record_error_username_long">Başlık en fazla 15 karakter olmalıdır</string>
+    <string name="new_record_error_title_required">Başlık gerekli</string>
+    <string name="new_record_error_title_short">Başlık en az 3 karakter olmalıdır</string>
+     <string name="new_record_error_title_long">başlık en fazla 50 karakter olabilir</string>
+    <string name="new_record_error_content_required">İçerik gereklidir</string>
+    <string name="new_record_error_img_required">Resim gereklidir</string>
+    <string name="new_record_error_not_find_loc">Lokasyon alınamadı</string>
+    
+    
+    
+    <string name="new_record_error_unkown_error">Bilinmeyen server hatası daha sonra tekrar deneyiniz&#8230;</string>
+    <string name="new_record_info_suc">Kaydedildi!!!</string>
+
+</resources>

@@ -1,0 +1,36 @@
+<resources>
+
+    <!-- Strings related to new record -->
+    <string name="new_record_progress_sending">Sending&#8230;</string>
+    <string name="new_record_label_image">Add Image</string>
+    <string name="new_record_hint_title">Title</string>
+    <string name="new_record_hint_content">Content</string>
+    <string name="new_record_label_send">Send</string>
+    <string name="new_record_label_sending">Sending Data Please Wait..</string>
+    
+    <string name="new_record_dialog_choose_photo">Choose From Gallery</string>
+    <string name="new_record_dialog_take_photo">Take Picture</string>
+    
+    <string name="new_record_dialog_choose_maps">Choose Maps Api version</string>
+    <string name="new_record_dialog_choose_mapsv1">Maps Api v1</string>
+    <string name="new_record_dialog_choose_mapsv2">Maps Api v2</string>
+    
+    
+    <string name="new_record_error_no_camera">No camera on this device</string>
+    
+    <string name="new_record_error_username_required">User name required</string>
+    <string name="new_record_error_username_short">User name must be at least 3 character</string>
+    <string name="new_record_error_username_long">Title must has maximum 15 character</string>
+    <string name="new_record_error_title_required">Title required</string>
+    <string name="new_record_error_title_short">Title must be at least 3 character</string>
+     <string name="new_record_error_title_long">Title must has maximum 50 character</string>
+    <string name="new_record_error_content_required">Content required</string>
+    <string name="new_record_error_img_required">Image required</string>
+    <string name="new_record_error_not_find_loc">Location cannot be determined at the time</string>
+    
+    
+    
+    <string name="new_record_error_unkown_error">Unknown server error please try again&#8230;</string>
+    <string name="new_record_info_suc">Record saved!!!</string>
+
+</resources>

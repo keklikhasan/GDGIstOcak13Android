@@ -1,0 +1,11 @@
+<resources>
+
+    <!-- Strings related to maps -->
+    <string name="maps_progress_getting_data">Yükleniyor&#8230;</string>
+    <string name="maps_progress_wait">Lütfen Bekleyiniz&#8230;</string>
+	<string name="error_not_supported">Cihaz Google Servislerini Desteklemiyor</string>
+	<string name="error_no_records">Kayıt bulunamadı!!!</string>
+	<string name="error_no_unknown">Bilinmeyen hata detay: </string>
+	<string name="error_download_image">Resim indirilirken hata meydana geldi</string>
+	
+</resources>
