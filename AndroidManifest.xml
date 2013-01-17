@@ -35,14 +35,14 @@
 
         <meta-data
             android:name="com.google.android.maps.v2.API_KEY"
-            android:value="AIzaSyBdLzQYN9pmMnhglNFTNj1TBOeBj4Kn-js" />
+            android:value="AIzaSyASLZAEZYxF_sXsoNgd9zvWIpkDNgeTibM" />
 
-        <!-- "AIzaSyDJIqtv6CuOT_SXiCO8jryYCfiY-wIRTkg" meric makina debug için -->
-        <!-- "AIzaSyBdLzQYN9pmMnhglNFTNj1TBOeBj4Kn-js" ev debug için -->
-        <!-- "AIzaSyAbGPft-d1RKlTAfttO6o7OgDDGF8v8vnw" gdg için -->
+
+        <!-- "AIzaSyASLZAEZYxF_sXsoNgd9zvWIpkDNgeTibM" ev debug için -->
+        <!-- "AIzaSyCyXKp4zVr9oGO94G1qI9DGgpbyU34X9EI" gdg için -->
 
         <activity
-            android:name="com.gdg.istanbul.ocak13.LoginActivity"
+            android:name=".LoginActivity"
             android:label="@string/app_name"
             android:launchMode="singleTask"
             android:screenOrientation="portrait"
@@ -54,28 +54,28 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.gdg.istanbul.ocak13.MapsActivityv2"
+            android:name=".MapsActivityv2"
             android:label="@string/app_name"
             android:launchMode="singleTask"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="stateAlwaysHidden" >
         </activity>
         <activity
-            android:name="com.gdg.istanbul.ocak13.MapsActivityv1"
+            android:name=".MapsActivityv1"
             android:label="@string/app_name"
             android:launchMode="singleTask"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="stateAlwaysHidden" >
         </activity>
         <activity
-            android:name="com.gdg.istanbul.ocak13.NewRecordActivity"
+            android:name=".NewRecordActivity"
             android:label="@string/app_name"
             android:launchMode="singleTask"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="stateAlwaysHidden" >
         </activity>
         <activity
-            android:name="com.gdg.istanbul.ocak13.SettingsActivity"
+            android:name=".SettingsActivity"
             android:label="@string/app_name"
             android:launchMode="singleTask"
             android:screenOrientation="portrait"

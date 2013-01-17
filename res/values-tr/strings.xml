@@ -25,7 +25,7 @@
     <string name="settings_category_api_info">API Ayarları</string>
     
     <string name="settings_category_api_url">API URL</string>
-    <string name="settings_category_api_url_msg">API URL'i değiştir</string>
+    <string name="settings_category_api_url_msg">API URL\'i değiştir</string>
     <string name="settings_category_api_url_sum">GDG Istanbul Test API url </string>
     
     
