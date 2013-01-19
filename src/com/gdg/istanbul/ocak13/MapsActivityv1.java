@@ -95,11 +95,16 @@ public class MapsActivityv1 extends MapActivity {
 		switch (item.getItemId()) {
 		case R.id.menu_exit: {
 			finish();
-			System.exit(0);
+			android.os.Process.killProcess(android.os.Process.myPid());
 			break;
 		}
 		case R.id.menu_settings: {
 			Intent intent = new Intent(mContext, SettingsActivity.class);
+			startActivity(intent);
+			break;
+		}
+		case R.id.menu_about: {
+			Intent intent = new Intent(mContext, AboutUsActivity.class);
 			startActivity(intent);
 			break;
 		}

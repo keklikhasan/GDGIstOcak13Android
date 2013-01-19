@@ -1,8 +1,21 @@
 <resources>
 
+      <string name="about__tw">\@keklikhasan</string>
+    <string name="about_header">GDG İstanbul</string>
+     <string name="about_text">-This is an code sample opensource project, not a full release,
+
+Say hello to the new year of 2013 with the first event.
+
+January 19, 2013 at 13:00 Technopolis ARI ARI-3 activity within the framework of the conference room to begin MongoDB NodeJS, Android, GWT, Mobile, HTML5 will share information about topics such as.
+
+Examples of application development using technologies on show. Time after the event, which together with friends and drink a cup of coffee and we can chat about the latest technologies.</string>
+    
+    <string name="tw_consumer_key">YOUR CONSUMER KEY</string>
+    <string name="tw_consumer_secret">YOUR CONSUMER SECRET</string>
     <string name="app_name">GDG 2013</string>
     <string name="menu_new">New Record</string>
     <string name="menu_maps">Map View</string>
+    <string name="menu_about">About Us</string>
     <string name="menu_exit">Exit</string>
     <string name="menu_map_v1">Map API v1</string>
     <string name="menu_map_v2">Map API v2</string>

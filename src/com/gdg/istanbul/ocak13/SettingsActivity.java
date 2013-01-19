@@ -3,6 +3,7 @@ package com.gdg.istanbul.ocak13;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.content.res.Configuration;
 import android.os.Bundle;
 import android.preference.Preference;
@@ -113,8 +114,13 @@ public class SettingsActivity extends PreferenceActivity {
 	public boolean onOptionsItemSelected(MenuItem item) {
 		switch (item.getItemId()) {
 		case R.id.menu_exit: {
+			android.os.Process.killProcess(android.os.Process.myPid());
 			finish();
-			System.exit(0);
+			break;
+		}
+		case R.id.menu_about: {
+			Intent intent = new Intent(mContext, AboutUsActivity.class);
+			startActivity(intent);
 			break;
 		}
 		case R.id.menu_default: {

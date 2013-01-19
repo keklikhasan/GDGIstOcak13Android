@@ -11,12 +11,10 @@ public class Constants {
 	public static final String EXTRA_MESSAGE = "com.gdg.istanbul.ocak12.extra.MESSAGE";
 	public static final String EXTRA_SHOW = "com.gdg.istanbul.ocak12.extra.SHOW";
 
-
 	public static final String PREF_API_URL = "com.gdg.istanbul.ocak12.pref.api.url";
 	public static final String PREF_APP_LANG = "com.gdg.istanbul.ocak12.pref.app.lang";
 	public static final String PREF_APP_TIMEOUT = "com.gdg.istanbul.ocak12.pref.app.timeout";
 	public static final String PREF_USERNAME = "com.gdg.istanbul.ocak12.pref.username";
-	public static final String PREF_TWITTER_ID = "com.gdg.istanbul.ocak12.pref.tw_id";
 	public static final String PREF_TWITTER_AUTH_TOKEN = "com.gdg.istanbul.ocak12.pref.tw_token";
 	public static final String PREF_TWITTER_AUTH_SECRET = "com.gdg.istanbul.ocak12.pref.tw_secret";
 

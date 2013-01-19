@@ -1,8 +1,18 @@
 <resources>
+    <string name="about_header">GDG İstanbul</string>
+    <string name="about_text">- Bu proje örnek açık kaynak kodlu bir projedir, 
 
+2013 yılının ilk etkinliği ile yeni yıla merhaba diyoruz.
+
+
+19 Ocak 2013 saat 13:00\'da ARI Teknokent ARI-3 konferans salonunda başlayacak olan etkinlik çerçevesinde MongoDB NodeJS, Android, GWT, Mobil, HTML5 gibi konular hakkında bilgi paylaşımında bulunacak. 
+
+İlgili teknolojileri kullanarak uygulama geliştirme örnekleri göstereceğiz. Etkinlik sonrasında vakti olan arkadaşlarla hep beraber birer kahve içip güncel teknolojiler hakkında sohbet edebiliriz.</string>
+   
     <string name="app_name">GDG 2013</string>
     <string name="menu_new">Yeni Kayıt</string>
     <string name="menu_maps">Haritalar</string>
+    <string name="menu_about">Hakkımızda</string>
     <string name="menu_exit">Çıkış</string>
     <string name="menu_map_v1">Map API v1</string>
     <string name="menu_map_v2">Map API v2</string>

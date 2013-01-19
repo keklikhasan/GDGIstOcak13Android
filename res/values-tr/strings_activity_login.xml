@@ -3,10 +3,12 @@
     <!-- Strings related to login -->
     <string name="prompt_username">Kullanıcı Adı</string>
     <string name="action_sign_in_register"><b>Kaydol</b></string>
+    <string name="action_sign_in_register_tw"><b>Twitter Giriş</b></string>
     <string name="login_progress_signing_in">Kaydediliyor&#8230;</string>
     <string name="error_invalid_username">Kullanıc adı geçerli değil</string>
     <string name="error_invalid_short_username">Kullanıcı adı kısa</string>
     <string name="error_field_required">Bu alan gereklidir</string>
     <string name="error_api_url_http_required">Url "http" ile başlamalıdır</string>
+    <string name="error_api_tw">Hata meydana geldi : </string>
 
 </resources>

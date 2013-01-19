@@ -87,7 +87,9 @@ public class GDGApi {
 			nameValuePairs.add(new BasicNameValuePair("file", Base64
 					.encodeToString(bitmapdata, Base64.DEFAULT)));
 
-			httppost.setEntity(new UrlEncodedFormEntity(nameValuePairs));
+			UrlEncodedFormEntity form = new UrlEncodedFormEntity(
+					nameValuePairs, "UTF-8");
+			httppost.setEntity(form);
 			HttpResponse response = httpclient.execute(httppost);
 			HttpEntity entity = response.getEntity();
 			InputStream is = entity.getContent();

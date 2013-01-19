@@ -34,8 +34,10 @@
 
         <meta-data
             android:name="com.google.android.maps.v2.API_KEY"
-            android:value="YOUR API KEY" />
+            android:value="AIzaSyCyXKp4zVr9oGO94G1qI9DGgpbyU34X9EI" />
 
+        <!-- "AIzaSyASLZAEZYxF_sXsoNgd9zvWIpkDNgeTibM" ev debug için -->
+        <!-- "AIzaSyCyXKp4zVr9oGO94G1qI9DGgpbyU34X9EI" gdg için -->
 
         <activity
             android:name=".LoginActivity"

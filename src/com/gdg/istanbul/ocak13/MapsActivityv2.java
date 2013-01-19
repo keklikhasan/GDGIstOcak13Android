@@ -17,7 +17,6 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 
-import com.gdg.istanbul.ocak13.R;
 import com.gdg.istanbul.ocak13.api.GDGApi;
 import com.gdg.istanbul.ocak13.api.Record;
 import com.gdg.istanbul.ocak13.map.MapDialogUtil;
@@ -100,7 +99,12 @@ public class MapsActivityv2 extends FragmentActivity {
 		switch (item.getItemId()) {
 		case R.id.menu_exit: {
 			finish();
-			System.exit(0);
+			android.os.Process.killProcess(android.os.Process.myPid());
+			break;
+		}
+		case R.id.menu_about: {
+			Intent intent = new Intent(mContext, AboutUsActivity.class);
+			startActivity(intent);
 			break;
 		}
 		case R.id.menu_settings: {
@@ -265,6 +269,9 @@ public class MapsActivityv2 extends FragmentActivity {
 					e.printStackTrace();
 				}
 
+			}else
+			{
+				return null;
 			}
 			View v = getLayoutInflater().inflate(R.layout.emptyview, null);
 			return v;
