@@ -1,8 +1,9 @@
 package com.gdg.istanbul.ocak13;
 
+import android.app.Activity;
 import android.app.AlertDialog;
-import android.content.Context;
 import android.content.DialogInterface;
+import android.content.res.Configuration;
 import android.os.Bundle;
 import android.preference.Preference;
 import android.preference.Preference.OnPreferenceChangeListener;
@@ -11,22 +12,22 @@ import android.text.TextUtils;
 import android.view.Menu;
 import android.view.MenuItem;
 
-import com.gdg.istanbul.ocak13.R;
 import com.gdg.istanbul.ocak13.utils.Constants;
+import com.gdg.istanbul.ocak13.utils.LanguageUtil;
 import com.gdg.istanbul.ocak13.utils.MessageUtil;
 import com.gdg.istanbul.ocak13.utils.PropertiesUtil;
 
 public class SettingsActivity extends PreferenceActivity {
 
 	private MessageUtil messageUtil = null;
-	private Context mContext = null;
+	private Activity mContext = null;
 
 	@SuppressWarnings("deprecation")
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+		LanguageUtil.setApplicationLanguage(this);
 		addPreferencesFromResource(R.xml.settings);
-
 		mContext = this;
 		messageUtil = new MessageUtil(mContext);
 
@@ -73,6 +74,32 @@ public class SettingsActivity extends PreferenceActivity {
 						return result;
 					}
 				});
+
+		findPreference(Constants.PREF_APP_LANG).setOnPreferenceChangeListener(
+				new OnPreferenceChangeListener() {
+					@Override
+					public boolean onPreferenceChange(Preference preference,
+							Object newValue) {
+						PropertiesUtil.setString(
+								PropertiesUtil.getSharedPreferences(mContext),
+								Constants.PREF_APP_LANG, newValue.toString());
+						LanguageUtil.setApplicationLanguage(mContext);
+						messageUtil
+								.showToastMessage(getString(R.string.settings_category_language_suc));
+						return true;
+					}
+				});
+	}
+
+	@Override
+	protected void onResume() {
+		super.onResume();
+	}
+
+	@Override
+	public void onConfigurationChanged(Configuration newConfig) {
+		// refresh your views here
+		super.onConfigurationChanged(newConfig);
 	}
 
 	@Override

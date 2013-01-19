@@ -15,6 +15,7 @@ import android.widget.TextView;
 
 import com.gdg.istanbul.ocak13.R;
 import com.gdg.istanbul.ocak13.utils.Constants;
+import com.gdg.istanbul.ocak13.utils.LanguageUtil;
 import com.gdg.istanbul.ocak13.utils.PropertiesUtil;
 
 public class LoginActivity extends Activity {
@@ -35,12 +36,11 @@ public class LoginActivity extends Activity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-
+		LanguageUtil.setApplicationLanguage(this);
 		setContentView(R.layout.activity_login);
 		mContext = this;
 		mPreferences = PropertiesUtil.getSharedPreferences(mContext);
 		mUserName = mPreferences.getString(Constants.PREF_USERNAME, null);
-		
 		if (!TextUtils.isEmpty(mUserName)) {
 			Intent intent = new Intent(mContext, NewRecordActivity.class);
 			intent.putExtra(Constants.EXTRA_USERNAME, mUserName);
@@ -67,6 +67,11 @@ public class LoginActivity extends Activity {
 						attemptLogin();
 					}
 				});
+	}
+
+	@Override
+	protected void onResume() {
+		super.onResume();
 	}
 
 	@Override

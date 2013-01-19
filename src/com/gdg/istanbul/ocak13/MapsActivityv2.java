@@ -22,6 +22,7 @@ import com.gdg.istanbul.ocak13.api.GDGApi;
 import com.gdg.istanbul.ocak13.api.Record;
 import com.gdg.istanbul.ocak13.map.MapDialogUtil;
 import com.gdg.istanbul.ocak13.utils.Constants;
+import com.gdg.istanbul.ocak13.utils.LanguageUtil;
 import com.gdg.istanbul.ocak13.utils.LocationUtil;
 import com.gdg.istanbul.ocak13.utils.MessageUtil;
 import com.gdg.istanbul.ocak13.utils.PropertiesUtil;
@@ -55,8 +56,8 @@ public class MapsActivityv2 extends FragmentActivity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+		LanguageUtil.setApplicationLanguage(this);
 		setContentView(R.layout.activity_maps_v2);
-
 		mContext = this;
 		messageUtil = new MessageUtil(mContext);
 		mPreferences = PropertiesUtil.getSharedPreferences(mContext);
@@ -76,8 +77,8 @@ public class MapsActivityv2 extends FragmentActivity {
 		super.onResume();
 		if (lifeCyleStatus) {
 			lifeCyleStatus = false;
-			mUserName = mPreferences.getString(Constants.PREF_USERNAME, null);
-			refresh();
+			finish();
+			startActivity(getIntent());
 		}
 	}
 

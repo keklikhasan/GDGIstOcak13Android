@@ -34,6 +34,7 @@ import com.gdg.istanbul.ocak13.api.GDGApi;
 import com.gdg.istanbul.ocak13.utils.ConnectionUtil;
 import com.gdg.istanbul.ocak13.utils.Constants;
 import com.gdg.istanbul.ocak13.utils.ImageUtil;
+import com.gdg.istanbul.ocak13.utils.LanguageUtil;
 import com.gdg.istanbul.ocak13.utils.LocationUtil;
 import com.gdg.istanbul.ocak13.utils.MessageUtil;
 import com.gdg.istanbul.ocak13.utils.PropertiesUtil;
@@ -65,6 +66,7 @@ public class NewRecordActivity extends Activity {
 	private EditText mContent;
 	private Button mButtonSend;
 	private static boolean lifeCyleStatus;
+	private static boolean waitImage;
 
 	// ACTION CODES
 	private static final int ACTION_TAKE_PHOTO = 1;
@@ -73,7 +75,7 @@ public class NewRecordActivity extends Activity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-
+		LanguageUtil.setApplicationLanguage(this);
 		setContentView(R.layout.activity_new_record);
 		mContext = this;
 		mPreferences = PropertiesUtil.getSharedPreferences(mContext);
@@ -91,6 +93,7 @@ public class NewRecordActivity extends Activity {
 		mImageContainer = (RelativeLayout) findViewById(R.id.image_container);
 
 		lifeCyleStatus = false;
+		waitImage = false;
 		// set value
 		mLabelUserName.setText(mUserName);
 		if (mBitmap != null) {
@@ -98,6 +101,9 @@ public class NewRecordActivity extends Activity {
 		}
 		mContent.setText(mContentText);
 		mTitle.setText(mTitleText);
+		if (mBitmap != null) {
+			mImage.setImageBitmap(mBitmap);
+		}
 
 		mButtonAddImage.setOnClickListener(new View.OnClickListener() {
 			@Override
@@ -128,11 +134,16 @@ public class NewRecordActivity extends Activity {
 	@Override
 	protected void onResume() {
 		super.onResume();
-		if (lifeCyleStatus) {
-			lifeCyleStatus = false;
-			mUserName = mPreferences.getString(Constants.PREF_USERNAME, null);
-			mLabelUserName.setText(mUserName);
+		if (!waitImage) {
+			if (lifeCyleStatus) {
+				lifeCyleStatus = false;
+				finish();
+				startActivity(getIntent());
+			}
+		} else {
+			waitImage=false;
 		}
+
 	}
 
 	@Override
@@ -272,14 +283,14 @@ public class NewRecordActivity extends Activity {
 		Intent intent = new Intent(mContext, MapsActivityv1.class);
 		intent.putExtra(Constants.EXTRA_USERNAME, mUserName);
 		startActivity(intent);
-		// finish();
+		finish();
 	}
 
 	public void startmapActivityv2() {
 		Intent intent = new Intent(mContext, MapsActivityv2.class);
 		intent.putExtra(Constants.EXTRA_USERNAME, mUserName);
 		startActivity(intent);
-		// finish();
+		finish();
 	}
 
 	public void attemptSend() {
@@ -398,11 +409,13 @@ public class NewRecordActivity extends Activity {
 	}
 
 	private void dispatchTakePictureIntent() {
+		waitImage = true;
 		Intent takePictureIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
 		startActivityForResult(takePictureIntent, ACTION_TAKE_PHOTO);
 	}
 
 	private void dispatchChoosePictureIntent() {
+		waitImage = true;
 		Intent choosePictureIntent = new Intent(Intent.ACTION_PICK,
 				android.provider.MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
 		startActivityForResult(choosePictureIntent, ACTION_CHOOSE_PHOTO);

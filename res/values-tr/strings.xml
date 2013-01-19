@@ -9,27 +9,42 @@
     <string name="menu_settings">Ayarlar</string>
     <string name="menu_refresh">Yenile</string>
     <string name="menu_default">Ayarları temizle</string>
-    
-    
     <string name="error_no_connection">Internet bağlantısı problemi çıktı!!</string>
+    <string name="error_no_connection_timeout">bağlantı zaman aşımına uğradı!!</string>
     <string name="error_on_clear_def">Ayarları temizlerken problem çıktı</string>
     <string name="suc_on_clear_def">Ayarlar temizlendi</string>
-    
     <string name="dialog_ok">OK</string>
     <string name="dialog_cancel">İptal</string>
     <string name="dialog_title_username">Kullanıcı adını değiştir</string>
     <string name="dialog_title_sure_clear_to_defaults">Ayarları temizlemek istediginize emin misiniz?</string>
-
-    
     <string name="settings_category_user_info">Kullnaıcı Ayarları</string>
     <string name="settings_category_api_info">API Ayarları</string>
-    
+    <string name="settings_category_app_info">Uygulama Ayarları</string>
     <string name="settings_category_api_url">API URL</string>
     <string name="settings_category_api_url_msg">API URL\'i değiştir</string>
     <string name="settings_category_api_url_sum">GDG Istanbul Test API url </string>
-    
-    
     <string name="settings_category_username">Kullanıcı adı</string>
     <string name="settings_category_username_msg">Kullanıcı adını değiştir</string>
     <string name="settings_category_username_sum">uygulamdaki kullanıcı</string>
+    <string name="settings_category_language">Dil</string>
+    <string name="settings_category_language_msg">Uygulama Dilini Değiştir</string>
+    <string name="settings_category_language_sum">Uygulama Dili</string>
+    <string name="settings_category_language_suc">Uygulama Dili değiştirildi</string>
+    <string name="settings_category_timeout">Bağlantı zaman aşımı (sn)</string>
+    <string name="settings_category_timeout_msg">Zaman aşımını değiştir (sn)</string>
+    <string name="settings_category_timeout_sum">Zaman aşımı (sn)</string>
+
+    <string-array name="settings_language_label">
+        <item name="def">Varsayılan</item>
+        <item name="en_US">English</item>
+        <item name="tr_TR">Türkçe</item>
+    </string-array>
+    <string-array name="settings_timeout_label">
+        <item name="3">3 sn</item>
+        <item name="5">5 sn</item>
+        <item name="8">8 sn</item>
+        <item name="10">10 sn</item>
+        <item name="15">15 sn</item>
+    </string-array>
+
 </resources>

@@ -20,6 +20,7 @@ import com.gdg.istanbul.ocak13.api.GDGApi;
 import com.gdg.istanbul.ocak13.api.Record;
 import com.gdg.istanbul.ocak13.map.CustomItemizedOverlay;
 import com.gdg.istanbul.ocak13.utils.Constants;
+import com.gdg.istanbul.ocak13.utils.LanguageUtil;
 import com.gdg.istanbul.ocak13.utils.LocationUtil;
 import com.gdg.istanbul.ocak13.utils.MessageUtil;
 import com.gdg.istanbul.ocak13.utils.PropertiesUtil;
@@ -51,6 +52,7 @@ public class MapsActivityv1 extends MapActivity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+		LanguageUtil.setApplicationLanguage(this);
 		setContentView(R.layout.activity_maps_v1);
 		mContext = this;
 		messageUtil = new MessageUtil(mContext);
@@ -69,10 +71,10 @@ public class MapsActivityv1 extends MapActivity {
 	protected void onResume() {
 		super.onResume();
 		if (lifeCyleStatus) {
-			lifeCyleStatus = false;
-			mUserName = mPreferences.getString(Constants.PREF_USERNAME, null);
-			refresh();
+			finish();
+			startActivity(getIntent());
 		}
+
 	}
 
 	@Override
@@ -105,14 +107,12 @@ public class MapsActivityv1 extends MapActivity {
 			Intent intent = new Intent(mContext, MapsActivityv2.class);
 			intent.putExtra(Constants.EXTRA_USERNAME, mUserName);
 			startActivity(intent);
-			finish();
 			break;
 		}
 		case R.id.menu_new: {
 			Intent intent = new Intent(mContext, NewRecordActivity.class);
 			intent.putExtra(Constants.EXTRA_USERNAME, mUserName);
 			startActivity(intent);
-			finish();
 			break;
 		}
 		case R.id.menu_refresh: {

@@ -6,7 +6,7 @@
         android:id="@+id/mapview"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
-        android:apiKey="0MjBCuIs49fErhUuenuImTUVJRdQ3piub0v4LYQ"
+        android:apiKey="0MjBCuIs49fEUZAEtxWh30zQXYHT9LQxP3MN-7Q"
         android:clickable="true" />
 
     <!-- "0MjBCuIs49fErhUuenuImTUVJRdQ3piub0v4LYQ" ev debug için -->

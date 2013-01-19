@@ -27,5 +27,25 @@
             android:summary="@string/settings_category_api_url_sum"
             android:title="@string/settings_category_api_url" />
     </PreferenceCategory>
+    <PreferenceCategory
+        android:key="app_info"
+        android:title="@string/settings_category_app_info" >
+        <ListPreference
+            android:defaultValue="def"
+            android:entries="@array/settings_language_label"
+            android:entryValues="@array/settings_language_value"
+            android:key="com.gdg.istanbul.ocak12.pref.app.lang"
+            android:negativeButtonText="@string/dialog_cancel"
+            android:summary="@string/settings_category_language_sum"
+            android:title="@string/settings_category_language_msg" />
+        <ListPreference
+            android:defaultValue="3"
+            android:entries="@array/settings_timeout_label"
+            android:entryValues="@array/settings_timeout_value"
+            android:key="com.gdg.istanbul.ocak12.pref.app.timeout"
+            android:negativeButtonText="@string/dialog_cancel"
+            android:summary="@string/settings_category_timeout_sum"
+            android:title="@string/settings_category_timeout" />
+    </PreferenceCategory>
 
 </PreferenceScreen>
